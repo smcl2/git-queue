@@ -1,4 +1,3 @@
-
 public class ArrayQueue {
 	
 	int [] queue;
@@ -28,7 +27,17 @@ public class ArrayQueue {
 	
 	public boolean isEmpty()
 	{
-		return (numItems==0);
+		return numItems == 0;
+	}
+	public int dequeue()
+	{
+		int frontItem = -1;
+		if (!isEmpty())
+		{
+			frontItem = queue[front];
+			front++;
+		}
+		return frontItem;
 	}
 	
 }
