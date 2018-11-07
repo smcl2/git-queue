@@ -26,4 +26,19 @@ public class ArrayQueue {
 		return false;
 	}
 	
+	public boolean isEmpty()
+	{
+		return numItems == 0;
+	}
+	public int dequeue()
+	{
+		int frontItem = -1;
+		if (!isEmpty())
+		{
+			frontItem = queue[front];
+			front++;
+		}
+		return frontItem;
+	}
+	
 }
